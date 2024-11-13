@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
-def index1(request):
-    return HttpResponse("<h4>ПРОВЕРКА</h4>")
+
+def index(request):
+    return render(request, 'main/index.html')
+def about(request):
+    return render(request, 'main/about.html')
 
