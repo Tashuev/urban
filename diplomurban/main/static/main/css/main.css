@@ -1,55 +1,82 @@
+/* Стили для выравнивания с использованием Flexbox */
 body {
-    background: white;
+    margin: 0; /* Убираем стандартные отступы */
+    display: flex; /* Устанавливаем Flexbox */
+    min-height: 100vh; /* Высота экрана */
+    background: white; /* Фон для всей страницы */
 }
+
 aside {
-    float: left;
-    background: #181818;
-    width: 20%
-    padding: 2.5%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
+    background: #181818; /* Фон aside */
+    width: 20%; /* Ширина aside */
+    padding: 2.5%; /* Внутренний отступ */
+    color: #fff; /* Цвет текста */
+    border-right: 5px solid #4d4d4d; /* Правый бордер */
+    box-sizing: border-box; /* Включаем padding в ширину */
 }
 
 aside img {
-    width: 80px;
-    float: left;
+    width: 80px; /* Ширина изображения */
+    float: left; /* Расположение изображения слева */
 }
 
 aside .logo {
-    front-size: 45px;
-    margin-left: 2px;
-    font-weight: bold;
+    font-size: 30px; /* Размер шрифта логотипа */
+    margin-left: 2px; /* Отступ слева */
+    font-weight: bold; /* Жирный текст */
     position: relative;
-    top: +30px;
+    top: 30px; /* Отступ сверху */
 }
+
 aside h3 {
-    margin-top: 50px;
-    font-size: 30px;
+    margin-top: 50px; /* Отступ сверху */
+    font-size: 30px; /* Размер шрифта заголовка */
 }
-aside ul {list-style: none}
+
+aside ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
 aside ul li {
-    color: #fff;
-    display: block;
-    margin-top: 20px;
-    transition: all .6s ease;
+    color: #fff; /* Цвет текста списка */
+    display: block; /* Блочный элемент */
+    margin-top: 20px; /* Отступ между элементами списка */
+    transition: all 0.6s ease; /* Плавный переход */
 }
-aside ul li:hover, aside ul a:hover{
-    color: blue;
-    text-decoration: none;
-    transform: scale(1.1);
+
+aside ul li:hover {
+    color: blue; /* Цвет текста при наведении */
+    transform: scale(1.1); /* Увеличение элемента при наведении */
 }
+
+aside ul a:hover {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+
+main {
+    flex: 1; /* Занимает всё оставшееся пространство */
+    padding: 20px; /* Добавляем отступы */
+    box-sizing: border-box; /* Включаем отступы в расчёт ширины */
+}
+
 main .features {
-    margin-top: 80px;
-    text-align: center;
-    width: 75%;
+    margin: auto; /* Центрирование по горизонтали */
+    text-align: center; /* Центрирование текста */
+    width: 75%; /* Ширина основного контента */
 }
 
-main .features h1 {font-size: 60px}
+main .features h1 {
+    font-size: 60px; /* Размер заголовка */
+}
+
 main .features p {
-    text-align: center;
-    max-width: 400px;
-    margin: 20px auto
+    text-align: center; /* Центрирование текста */
+    max-width: 400px; /* Максимальная ширина текста */
+    margin: 20px auto; /* Отступы сверху/снизу и центрирование */
 }
-
-
+form {
+    margin-left: 10%;
+    width: 700px;
+    margin-top: 50px;
+}
